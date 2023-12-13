@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Menu Pet</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="bg-sucess-1">
+            <h1 class="text-center fw-bold">Menu Pet</h1>
+        <ul class="nav nav-tabs nav-justified bg-warning-1 fw-bold " style="height: 55px;" id="pills-tab" role="tablist">
+            <li class="nav-item  " role="presentation">
+            <button class="nav-link active h-100 bg-warning-1 " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><a class="text-white fs-5 text-decoration-none " href="#T-cardapet">Cardapet</a></button>
+            </li>
+            <li class="nav-item " role="presentation">
+            <button class="nav-link h-100" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><a class="text-white fs-5 text-decoration-none" href="#T-cardapet">Parceiros</a></button>
+            </li>
+            <li class="nav-item " role="presentation">
+            <button class="nav-link h-100" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><a class="text-white fs-5 text-decoration-none" href="#T-cardapet ">Sobre Nós</a></button>
+            </li>
+        </ul>
+    
+    </header>
+    <main class="m-auto d-block w-95">
+        <div id="carouselExampleCaptions" class="carousel slide my-2 container-xxl w-100">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="false" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMQERUQEBIVFhUWFhUVFxcWFRYVFRgXFhUYFhUVFxYYHiggGBolGxUXITEhJikrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIEBQYDBwj/xABHEAABAwEFBAYGBQoFBQEAAAABAAIRAwQFEiExBkFRYRMicYGRoQcyUrHR8BQVM0JTFiM0Q5Kis8HS4VRygrLxF2KDo8Ik/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAIBAwQFBv/EAD4RAAEDAQQGBwYEBAcAAAAAAAEAAhEDBBIhMQVBUWGRoRMiMnGB0fAGFEKxwdIVM1LhI7LT8RYkRFNyc5L/2gAMAwEAAhEDEQA/AK1IlQuyvCpEJSEiEIQhCEIT6VOezinCkQMRzGsckj6m4aKFMbU6q+BDfnkuKEIhBMoQhK1s5KVCdSZJUhDRGSVPEKkukoQhaj6vsrcDnw1oDS/rvxOxMbMBpcfWJOjYgiDqEe8NiVdQs7qskECImd/hxWWC7Va0iIWhpXdZQ0Y3Bzmg44cJOFtYywzBktaI7PaS1LBZhhAwOHWBcHndTkEAPBgkTGHfEhJ0zZ1rQLBViZbxPl62rMIVwaFJtSuMDXNa0GnLnAEkjSDJBknMkiADmCp9a77LjqAw1rXMwEPnEJe54ye+ThaANMyMhKk1gNvqPNI2w1Haxs16iRsj4Ty2rMIWkr2CzkhjWjFFUiDl1TUgEkwTIYQIGQOZlczY7MykT1H1GsJeC546zgHNAAIBiXAxOg4o6UbCg2F4+JvHuMZeoMrPoVlf1CnTqYaTQGxkQcU5mCTjdu7NfVCrU7XBwkLNVpmm8sOYQkSoTJEhSoQhCEIQhQhCEIQhCErWzkEIQxhOiaV0q1QwQNfnNQnPJ1SyrLi6uqgc03piuSESmuBKkQQhQmSpEIQhCF3sNkNaoKTSATOZ0yEq+smxVaoTFVgA1JDvBI54bmtFKzVavYErOmsYjJMWv/6fVv8AEM/Zcgej+t/iGfsuVfvFPatH4bav0cx5rIIWw/6fVv8AEM8HKPeWxFajSfV6VjsAxENBxRvOfAZ9yPeKe1A0XaiYDObfNZcBSKbIUdtRrcsbvAJfpLfbPknFZm3kVtd7J6aOHuzuLPuUtCiG1N9spptrPbPl8VPT09vIpD7J6ZH+nPFn3KakKrzeLPaPl8Uw3qzi/wAvij3int+arPsvpYZ2c8WfcrRWja1AhoLXdURlOeIST2ycuQ7llfrdp0x+XxVtY7JXq5to1AOLwGjt6xEjsSmtTdr+fklOg9JWYEvogA/qLI5uU219EGltMSSQZ1gQcuRzEjkOadTZQxuknAMMbjmRigePcutLZ2sR1nMHKXH+S6fk1U/EZ+y5PeG0rIbLXvT0Y5Rr37+QVdantIGAQACN+fWJBJOuoXBXP5M1PxGeDkv5MVPxGfsuUh7Qq3WKu4zd+SpU6myVcfkvV3VGeDlEdYXNEBw89Uwde7KqfZn0oviFBe2DCRSPq5/tN80n1e/2m+ae6dipurghd/oDvab5pPoLvaHmi6UXVxIQu30N3tDzTfojvaHmi6diLq5oTvorvaHmk+ju4jzRB2IulKykSJTKtq3Ny4/PBJXxsaTLYHLPMqIDKrM61aGgCQnJEIQpQhCEIUtMNMcF0QnVEriaI4ppoHipCFEKQ4rrccstDXROFtQwNTDCYXqFwWOpRoNZXcHVes55Hq4nOLobkOq0ENHJoXm9wfpLJ4O/2lesh05rnWzML1Wg8aJ2ysXtPtwKL3ULG0VarTD3meipkZFuWb3g5QCAN5kQsHbPSNbLNVa4V+laTD2VGU8OuWEsa0t8d+9WFuaKFS0UXesypU/ZcekYe9r2mOa8vvirNQ9qxwu46AMF9D7H7c0LwinhdTrROA5tOUnA+M+wweS1hGXBeOehKwF9V9c6MbHe7IeWJeySlUFeQW/ZOo0HA7E5rntdMBzsLi3EN0GJ3a71mbZZalI4X03A8w7yxDNewXiB0r44+cZ+ajmliEESOBz8luDJaDK6Nm9qrVR/h1QHgYA5O4wQY7pOsrx6nJOhjs46LjanieqD4L1592UPwaR/8bfgildlBpltCkDxFNoPjCjojtWh/tU049GeI8vovJbFdlev9lTc7mGmPE6eK011bBE9a0PgcGZu7ych3ArfQhMKI1rlWn2gtVXBkMG7E8T9ADvVdd1y2eh9nSb/AJj1n/taqwSpFaABgFxHvc915xJO04nicUJwTQntQlTgE9jU0J4UFNCU8FXXhduPrMydvG4/AqxSOcACSYAzJTMeWmQkq0m1W3XBZetRe31mx3ZeKYyg93qtJ7JWosdrZVbipuxCYkKQrhaiRgFgOimg4uPDH14LKfVlY/qz4tXGtY6rM3UyBxiR4hbJdaVnc7MDLiT8yoNqIxMJxopjsGkz4H6LzwvU2zXXWq0zVp03Oa04TGZmJMDUxl4rTXvsx0oxU4a/wDu3nzTbkqVaFkq0GPYK7Xu6jnAFoIBJE+tOZG7NSbW0slkThn65qhujHNq3KsxBgiMSBljr3fSSMr9AqxJYRnGeRBkCCDmMyPFRKzS0wY0ByIOREjMcireyW/pGTVcHOcQTiEznqSctNO+NVztrKLmveXHpM+IyH2eWkwBPKdN1gqEGHclnNnYWBzDvxPrHdiqC3O6ju73hRGaLra3dQ93vXFmiH9pZh2U5KEiEqhKUiEIQpidSZPz5JWM48j2hK+puGnvTKkCMSlrvnLguSRKpUEyZT7Gfzre/3Fej7NXl0rDTeeuzzbuPdp4LzeyfaN7/AHFXFOs5hDmOLXDQj3wciORSVaPS0yNepb7BajZqod8OsbvMZjxGtL6R7ltT65rWSg6qH02NcG4ZDmkiTiI1aW6T6p5T57Z/R7eVd/WshpyfWfUpta3mYcXEdgK9nuS/ukYGWgtbVGRLZ6N//cJ9Un2ScuJ1Vsa7faHiuO6m9pggyvYsr0qrQ5rgR3+o7jBVXsHcJsFlFF+HpCSX4TiHAAEgSIz03laC02kU2lx7hxKrqt4ADq5ncYynnxCr6lRzvXcXHjkPADIJqdAuPWwCSraGtHVxKTFJJO+T3lDuSrPpJpGalRzgajmZtBgCmXyBTbO7wCl07S1znMaZLYnIxnpnoVtlYSIXdIo1S8KbSWkmW5GGPIENDjmBGTSCg25kxJ9YN9V2ZJLcss8wRI3okKIKkoXCx1i9pJBEPe3Pg15AOvJSCgIIhNQlSIUIC6tCY0LqEIShKEBV9733Z7K0mvVawxIbPXI5NGZ0KXJPmrIKo2rqYbPrAc9jT2Epbsv5lduNjHgRIxQCQdMpy71OrXc6103UnNLWuicxPERIyKz1K9MgtBxxyxWulZ6jXNe5sCRnh+/JU2yIw42djh7lpVwu7ZEUMJp1HZCIcQZHAkBSKjcJwnVFB0NDTmi0sl5c3EJj2FwwtME5A8JylV+2l+1bI1tOhDeoXF7syA3KGjTFzOkqyVbtXc4vGmKQq9FUZJxFmIFrhDgMxOg35Irg4FFmcJIKznox26tNttDrLWDXt6zg+Ie0DQGMncNytPSLZw2tTqD77SDpq06+DvJS9itkqV1h7ukNR7gAXFobABmGgTqqjb2rUdXa5w/NxFP3mec+UJrED0sjLFZdLuHupBzJHzH9u8rOFyYXJhcmly68ryiW0Hqn53pjNElR2R+d6Vmiqfmm+FOQhChQhCczUSpPU/7fFRKYCV1rVJhc0IVizEyhCEIQls32je/3KzlVln+0b3+5WEqxmSsGSdK0d32npGAnUa9o3rMyrO4asPLfa94/sSkrtlvctlhqXKoGo4eXP5q9SOKVNesa7hMAlUovmzuAcGvjEZOGcJILCSQSBI4TqplGpTY9rWTNUYmwSWRhBLtYzAGapbptDzZxRp0XnFjbjcIpgOJBdO+J05KQWmm+g+m01Wsa6k7A0ucHCcRA4a+CoD9frf3r0Vp0dRZVfTaCCDUAF8GYa66TAFyXAAAnrZZgkzLda6TBVLmuJbGMZZ9IGsMZ8IXHp6D2vdFUMMy/rBjjMlrTOclxOQ17BEG00Kr2Wpz6bm4+iwjUkAjTLMgATGmasb3sp6CmGNdFN1MkM9YNa0gwOInyUlxxI9YqsWOytNNjji5wBcHiB/DpOMRIm+5zWnsjWDAiRZbaMeAse0uxObjEYj6xGpg5kwVYKjsb2uewtNofBn84RgZIIJOUSJiO1XadhkLn26gKL2i6WmMQZzk5BxvARHaiTJHVIQlDUjRKi3ve9GyU+kr1AxswNS4ng1ozJTErGBKmhdAszde29ktBIYXiDq4NE8wA4nyWru+rSqRBkHQh0+6FU6q0K5tB5TAF5RtnQrXrbejsdA1G2eaTqgADccy8OecoGQA1kOyzXt7LNT3N8ZKZaCKNP82wADRoEDPkFTUqXhAV9KkWukrMbNXGLBQ6S1vaIAJ4COe9U9/+kxlMRQ6rdzoBe7/K3QDmVn/SLtBUrOFEmACZA0nd3Lzu1YgAXSZ04ZLG0AiG4Bb3GDL8TyHmvVrh2oNtmaj3EHMOcYgrS4ogDy39q8u2BtzC8ZAO9Uxlkd/MSvSLweG4XAwsFZhY85rfRcHtGStrLa5ycVOB4LPUa+Ic8vnn/dXNhdlB7itVntjmkBxkLJabE1wLmiHKQqe9bbReTZ6zZboXezzHZOvarkLIbSWKoyo6oGkscZkZwd4dwz3rvUQ1xx8F5i3PqMpywa8cJwVdeezFWn16X52mcwRm6ObRr2ie5ULwQYIg8DkVbWa96lL7OoW8siPA5LXbNW59qpudWY04SAHYRDss8uI5cVoc5zBJx5cly6VOlaHQyWnZmOOfFecvaSDA0zPLPenU9F6PtYwNsVYAAZN0EffavOGaKsPvmUtqs/QQ2Z1pyEqCnWVCRCEIUxCEJ1nQhCEIRQ+0Hf7lOlQKXrjv9ynsZKdmStaJCfTZO9Srm+3b/q/2lRKlQRAVrs5Z83VDpoPef5eaioYaStNmZerNA2zwx/bvKu0jgnJFiXoCJEKJdtj6Gk2nMxvjWXE8TxVbdVtFKgCQXOdVe1rWiXOcToPir0rN0bHUptp1OjJLKlXEz7xa6AHAbyOG9VukRHrJdeyubXFXpiJc9rjiG3jFZ0agJddBOQmcFYsvQgltWm5jsDnDNpxBoJhvOBou1W3gURWgnEGho1OJ/qty1M5dxUKmx9orCo+mWU2B2EPEPc5wg9XhEaf8crssbxU6N4Ip0i51OQesSeoecdY5aEpbztWvcmdZrMBecAHNAc9odI+PqgkkySKciSW9IcerAm1LwM4KdNznCMUEBoMZtxHfO4KZY64qsbUAMHcdQdHA9hBCohSNOrUDxaCHvc8GkTgIcZAMfe3K4uoYaQGAsEkBrs3QTMu5nhuhS1zicVXa7LQpUQWD9MOBzlsuzcZ62Qa0FokPkwTMxcF5v6YXDDZhnM1SOEdSRHHTwPFejALLeki6jaLGS0DFTOOTlDQDiz3Ze5FXsFc+ieuF5Ts1bW06sEZnIHnqF6bsre7n1BSpvAdlkRM7onivNbju7HVDHSHTEaGOGWq9q2T2Zp2d4qmC4CBkcs4Jz+c1hc45LqMAGJW3srThEiCmW9vUdluXai/JUu0F7CkC0HPfvj4IJAElK1pJgLzLaG6hVruLsok+Mz8hYe8rnqB5a0E4SY+fLuXqhqNfULoiZOeWv8lT3hdLpxtOe7KcjnvWBtYtcYyXRdSD2hYq6rFXxOqRLwZkmDIkkGToZzy8M16Bdd9NtVOD1XDItOoIJ+e5QLHZHHMz5QrMXQPtGth3tAQew8VXWqh+aejSuZHBSrBXg6zGS0l3VhHiFisDmOxbt4GSbUvgy2gwwXRJ4D4wCqGuIOCvqNBC63/tbVs1ctoy9o1G4ZSu9yekUVThrUcEfeaZz4QdPFRqN0BlN1RzeJdvyGju3+6xpo0ulc+nVBYfH55Lo06zqbYafqFzqtBtR0uH0K9nsz7NX6wFNx5taT5hWDRGQ0XjNK8XMd+YcWEcSRMb40WlubbOsBhqtDjx/wCP7rVTtgP5ghYqlgI/LM+ufJara/8AQq3Y3/e1ebM0WvvvaJtazvoluFzwIznRwOhg7uCyRZGUrpWd7XiWleb0vTex7bwjD6n1KEIQtC5KEIS4UIXem+e1dFDlSKb57UwKqc3WF0QhClIulnpS4Ht9ykPqHRRbM1zqjWskkyIHYtPZbkYwYqzgeUw0KL4bmttCg+qOrlrOpVl3Xe6seDd7v5cytTRpBjQ1ogAQFwbbqIyDwI7h7oUkKmo9zjiIXYstGnTBumTrKEiVRbRQk5NaRzJmeQ3KpagpKRRDZz7DfEgfMpgDcpDIynrS736yolEKciFBa0cKeYy65MkEeWRQ9rd7ae4ZuOoyjy0UyphToRCiMphxAhhiNHEwOxILKY+zZuyl3iolAapwCbVphwLXCQQQQdCDkQU2z08I0APIk9mvJd4UoWBdsi+zVg+n+cpj1fxGj2TPrAbt69GusywHTIe5cGmF3p1Y0A7ljfRM4Lcy0tI6yl2+2dHTL+HgMl5NbL2Fao5zidTB3t114jUTz3aL0u3tFZhpmQDvELyO/tkrXQrTTY+vTI9ZoGnsvbqO7hMzpU+i4jFXU67QcFfXbXnQT4/MK8qiaY8VWbOWc0Ghr6D2D23NLQZ0GY5/OatbwvCk2GExiyBgkd65dVkOgLqU6hc2SFAssd2qtKNZshsRPBZ+hULXEE7yreyPWdXgKLfkNYSI5LF2W7zUc7J5fiLmuGQAgRppGfit1ebZyG7Xgod3WRxr0Wsb1cUuA/nyE+5ODdwCCJxKgW2869OzuoOZiJGBz9CAcjI7FnhdbMBqYjA1gTHaF7TbLFTqEipTa7X1mgqrtGzFnfIALWnVrTkfGY7l0jYqrB1CDy9cVyxbqT+2COf78lgrFcbrQ1pYAY3tzXC8KzaLjTow9wyL9wIyIb2e14cTttrLY2x2boKHULpaANQzLEZ4mQJ7TuXmFaoW9U93Ydx4qxlmDTLjJ5fv3rvaIoCu3pntw+EHXGs7pyG2Z1KXTqw4hziSRM5zOLUk6/PfKZoqeyHrn/L/APQVwzRdSz5FeS9uT/naf/WP53pyEIWleLQllIhCEqQGEqRCFJpukJ6iNdClNM5pgVU5sKw2e/Smdjv4ZU/aC1EVcB0AEd4z/mO5VN1WkUq7Hu0Eg8paRK1tuu+naWgu4dVwOcHnoQkvXH3iunZqZrWYsacZnww9d6zFhourvwN01ceA49vBbJrQAANAIHcuVisbKLcFMQN53k8SVIVdR947lvslmFFu85+SRNSoSLWhM6McB4BLUqNYMTyGgak5AbgoV416NVpZ0zRvOm4wZHCfNKSnpsDnAOMCcTExvjWpgpjgPAJOjHsjwCq21KAc2p9IEMa1klwzgGM90ySRvI5LjhoYHUvpA67jv1IJBynrOO87+rpklvbuavbRomJqRlPUOEnHvuiDsMwDIV41gGgA7k9QaNvosa0dMDDWiSZJGEEE9oIPepyYFZiIKcEqaiVKE5KE2U9pUIT2hPmExcLVV+6O9I9waJKsY0uMBTqFQEScwdQdFEvLZmnWHUcWTOUYm6bgdEWI/BWlmeQcJ7lznsa8YhdJj3M7JWBtWz1az9Ysxt4sz8RqiyVo1Ab2r0hca13U6hBewGFmfYx8JWplsI7QWKo2J9pdgpCB9524Ditlc90U7O3LM73HUxp2BQ7xvBlmLaFFoxu3AacyrCgThGI5q2jZ208TiVVWtDqmAwC5MoTquzaAXRca1rYz13AdpWp1RxWVtJoUK8tn6FozqNkxAO8D5K85vv0e12vc6icTdYOq9SoW6nUMMeD2FSkoctdG0VaJBY4iOHDJfO4sj6NTBUaWkDf2qzZovSdvrqpusz6+EY6eEg9rgD715tT0XQsplp71wPai1+82im8iCGAH/wBO809IlJSLUvMoQhIhC6Fh1hMXarU3DT5yXFQpMIT6T4KYhSoIlSHesPncrC771qUMmmW+ydO7gVVtfonyrAARiim5zCCDBWws20dF3ryw8xI8R8FNF5UT+sb4ge9YGUkqs0W6lvZpGoO0AVv/AKxpfis8Qu1Kux3qvB7HArzproMp9eqHBQaO9WDSR1tHFekE7k0idfmNF59Zbzq0vUeY4Ey3wK09z382sQyoA1+72XdnA8lW6kWrTRt1OqYOB3+au4SQhCRbEJUiVQhCRIhChKlBSJrnoyQBOC6OqwoxzzXRuaSqQ0FziA0AkkmAANSTuXPqvLzuXTo07g3rrQyhXFHMArza99umsJbZ2Y4yxPnD3NGZHgqStt3bT6lRrBwDG/zE+agNK61LRFqqCSA3/kY5AEjxXtQdmpAK8G/Le3a/SD4M+CtLi26tz6rKb6rXNcQDNNmnaGgqbpTv0LXaCbzeJ+1em0bGBUdVObjv4BV21t/iw0g/eTACuKZkSvOPTW4iz0yPaSrlalGftlaq/qvDRyXKk11XOrUc48ysDYb2wtAVtZtoealOHBaF1ofZajatInI5idQvWLhvVtqotqtOozHArxIXsKuS2Po8t3RVuhnqvEjtUHDFBErZba/oNf8A0fxGrydmi9X20/Qa/wDo/iNXlDNFvsnZPevMab/Mb3fUpyEJWt46cVsXGQ1s5BS2ZCJHkuRcGiBrx+dy5YjxUZqQbqRIlSKUqEIQhCRp6wXWVwcN4XbojxTNdCCQiUkpeiPFBpHimvJZG1NlEpehPFHQnii8iRtTZSSn9CeKOhPFF5TIW12bvPp6eF567IB5jc7t3H+6t153Y6tSi7HTdhMRMA5HdBEblN+urV+N+5T/AKVQ6njgurR0ixrAHzO7+4W3QsR9d2r8b9yn/Snsve1O/XfuM/pS9GVb+JUdh5ea2iaVi3XzagY6X9xn9Kab5tX4v7lP+lHRlQdJUdh5ea2TnpNVizelp/F/db8Eovi0j9b+4z4JKtFzmwE1LSlBrrzgeA81uKYhef7e3+ajzZ6Z6lMw+N7xrPIaRxnkpDtoLSP13/rp/wBKoatmxEuLWEkkklupOpWcWR+0evBdmwe0NioVekqseYygNOO3F4y1cdQVGSmlyuzYh7LP2T8Un0BvBvgPim92fu9eC7f+NbB/t1ODP6ipMSsNn6kWimebfepzbrBE4W+HlqujbM1mbGtGc6fPyVHu7t3rwSP9sbC5pFypiNjP6i9qs56o7Asb6V7tNax4h9wyVRUdqLYwBorZDIfm6Z97Uy27RWqsw06tTE06jBTHuEpPdHzmPXgvOfjNn2O4N+5eTVxBgBc2uIW8q3XSdrTHiR7lx+o6PsfvO+Kn3V+0c/JL+MWfY7g37lk7PanNOS9X9Et31K1U2ipo0QFlRc1Ifc83fFaK7L7tVmZ0dCqGNG7o6Z83NJUGyPOz14JhpmzjU7gPuXpO2rf/AMNf/R/EavJ2aKztm0dsr03UqtbEx0Yh0dMTBBGbWgjMBVrQtVnpmmCCuRpK1MtDw5k4DXG3cSlXd1YFsZ8FwQr4XPBhCEIUqEqAUIQhIhCEIQpTdAhCkJKmSchCEyqQhCEIQhCEIQhCEISsYTour3hogfPbzQhLmU+QXFNJQhMkXJ1bguRM6oQkV4aAlSIQhShCEIQujKxAjJc0IQpkoQhCFCEIQhCEIQhCEpQhCEiEIQhCVCEIX//Z" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtOZQbf5mNqvg04SFWAYDDpL1K8zFUFcdMzl7NKBH4Az6uH14CO2_0OemBZ0z34AOI0RQ&usqp=CAU" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMRERUSExMTExUXGBgVGBgYGBgYGxgWFxUYFxUYGBcYHSggGBolHRkVITEhJSkrLi4uGh8zODMsNyguMCsBCgoKDg0OGxAQGy0lICUtLSstNS8vLS0yMi8tLS0tNTUtLS0tLS8wNzUtLS8tKy81LS0tLS0tLS0tLi0tLS0tK//AABEIAKgBLAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYCAwQHAf/EADgQAAIBAgMFBgUDBAEFAAAAAAABAgMRBCExBRJBUWEGInGBkfATMqGxwULR4QcUUvEjFUNicrL/xAAbAQEAAgMBAQAAAAAAAAAAAAAABAUCAwYBB//EACsRAAICAQMCBQQCAwAAAAAAAAABAgMRBAUhEjETIkFRkTJhcaFT8COBsf/aAAwDAQACEQMRAD8A7j4AfPj6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG7ZkXW27SvuwlGpLXJqy8X+xtqosteILJqtuhUszeCUBG0K0qmlSKfKKv5EjQSSe/JuXD/RYPaLlHOVn2IK3WpvGH+T6DZVouNr8dDWVtlcq5dMlhlhCyM11ReUAAYGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABLYvZFs4ej1IuUbZPIue/wCBxY/DU6nzKz5ovtTtsZeavh+xQ6bcpR8tnK9yrg65YGSmo3yfFfnkb6mzEl89vf0K+O33tZx+ywe40J4z+iNBJT2U7JqSd19crL7kfUW782Rqt0l1azJGyrWU2vEWYg+0u87RzvkjpeCnlks+p7HR3yWVBnr1lCeHJFe7U7MnicO4U5bsr7yzspW/S+h5thtmYr4nwlSq7yya3X/9aW8z25bLq2vu5c3kv3JGhgoUYNzbm3ra6j9M3/Jb7XK+rNc4+X+/JUbmqLMWRl5v78Hn2z9gSwsVUr1479l/xxtfw1zfkZVse25Vt6EIqOalJ3SXJcy7utvX3VGEVpaKvfnpY8y2mqssQlWc91zs3knuX0jw8l0L6Hm5wUssxWMln7J9ooY9yowdpwV1GWW9HRteDsd9ZOE3CSaknpr9UVzaOCp4HEUKtGUZVJbyluu+7TsnH4ltJNPjnaKfjI09k1a1d1JS7s3pbPl4J+7EfXaGu7yzfPuiRotbZVzD9kkCxYTZyjDdm3U8c2vN/cgsVGMXk1rp5nPajabK4uUH1JfJfafdK7GozXS/0agAVJaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFllilLTJ6mmdV8jRfPW3viY1ZPn71R1rbORSPs6n2Oapin8rd7/AJNNfE5/V5nOqr3o5cV9TFPDMukzxG0ZUYODea7y6pv8ciJwlaeLqxowzlK75qK4u5If1Aor+137pOL1vwepl/RnCRdKpWau3LdT6JLMlV157mmc0lwXbD7HpUo3au1x6s4ZYmlduUklG7zv9LLN+BL7WmoxbTtlz9Pqef4zaiXxazbnCim4xekqi459bcOBJUOp4I7nhER/UXt9UhJUKMnTTW83/wBxaWVv0X1u1e2iWpWOyGNnW3pVJSk09ZSlKXq2VradZ1pOc3eUpOUpc5Sd34Z8OB04HHfCWqirW8jfWopmibbR6jRx0opLedm7X1cW9PFHNjKXecamb0unZeZwbJ2hCtSyatp1ujpwmKbybzWj6cPS32M7IpPKPINvubaGxITa+HOSz0en7/7RYMClRtvO/hl9b6ZX4EHRxMlLJK2enXl9Trpp1JZuz6ZcbWz8iO1nuSFLgnsVtuEIOTlGzyV+PguJWJ1HWe9mlfK6a59Lk5hMPSjaTjByjld5tZq9rks6FKStJRXp9wpRiHFvkqmDk0t16r7HQd+O2ZFSe5UXdV91vhwfu3U4DlN10yqt6o9pc/7On2vUOyrpl3j/AMAAKoswAAAAAAAAAAAAAAAAAAAAAAAAAACTlWXn9/D9jkq4hK6Tt/Bhe6teS8mvW2p8lh00rq+Wt2vrb3Y65o5E04iplfp5Nr8HDha+9USfB5rnmZY/dUXw4PPW/VHNsqleSm3p7v1MenkyyTvbPBrEYKfROeXTh9zT/SOvbDPKyUtOeWf1uSHxN+k4txtbNN+pE9iq8aOHqybSScm/CL1J1ZFkS39Re0bw9G1POpPuxXlm/I8825XqwwsIyv36cZXbb3t5Xum+GurPuKlVx9d1t2Uk3uwilL5fLS+rZ01OzlWNCTxM05Jb0YK8t1RTe45N6WS7qyVsmTIR4I8k3yUBwv7+pq2lh2mnnuv2yTr0nvNq/Pw8jNQnKLhK9n5eB5j3MDLYtV0abTyu00vLUsWycWp5N52tddXe3vmVWns+rJq6y53y/ksWz8M6V5SeefK1/DgM+gwT+Cusr3Wfv3zO5z3Lt+b05EPgsRx9PC2f1f0OrFylUg1pflyz6GEjdE56O3bSbb4vT01Xgd+L25v05OnLvc1ryuvfMpm1YSgo0afzSkopeOX3aR04LFVNnTi6lK6bd9yWdle94SXFKT1QVOVkO3HBOdm8ZUlUTa0i1KTbad81dc0WKMk1dZo+bRjTnQhXopL4ltEle6uslld8tDVgX/xxKHeuao/kudnWLJfg3gA5s6IAAAAAAAAAAAAAAAAAAAAAAAAAAA3UK0Y3aTbet8lfxevka8TUSllFO/JLyIz/AKleN5Pe6LTTm8vuY4eUqrVk2+ll9Udk0cbk+1lvd2Or4WRKx2f8Kik7OTV3+EdGz8BGl3pPea46JeHM48fj3Nvda08EstZckZwq9TF2HLhqkpdyO9KWaUUruTtkslfloQHZlVMRR+Arx35Sc28u6nmvpZnofZfCvDYWri3FzquM3Til3lGMclFP9UmvTdWWZF7EtJOq4uMnlZ/pS4Ll/CuTK6jBPrbO3CYSnh4bsEllm+L6t/giNpRveU/FL9/2JXETvKK8/T+bHFtKUWncl9kZKGTzfaEEpvlfLwXFetuvkaIVEl/i0mrau9rp++px7WxE1Vmnom0vC90ccsW3r0+xo60RZx6XglnjOrSt9j5LEuSzldXIuNd8c0dMHf5b5rPLTmYtniJjZ2JeiV+HrkXbYWD3l3r+ntFW7P4dZeS8M883wLph8Wqct2yvx9MzROeOCTWvUpPbfZ/w6kJNNLPPly095EVTruracpSnSoxbnOWmUWowT4ylJ2trm2z03aVWhVg41Emn/NmsstGUatsuP9zSouUp0nK6i22lbWy048uZsjYn2ZqlBklsHFOGCw9N5PjfLi2s+eZObLbdNN6tt+Tk7MjttwhvqMWksllwSXe9+BK0cQpNWVlZNflFTutTnp216PJabXYo6hJ+qwbgAcqdQAAAAAAAAAAAAAAAAAAAAAAAAAAAbsPsCgndxb/9m3/BI06UYLdglBeH5OmnRd80dDopeZ38a/Y4JzwQO3cR8OjJvV2WSzd3wdyo4zaii6dNLNr4kuv+GnFJSfn0JrtrjrNU95vdzayWb0vbp9yjbRxHfp1lZpJR4/peln0aPY46sHvOMnpXbrbNSlChOhVjBTiu6rPJxytFq2Wl0/I5Ozjn/b3m3KblJyfO8mOzONo7Rp08LiI724mqUllKySsm4rupJW8bc85Ts32bxEY1FLdS+JLdTb+WyWeV75EqLRnXKMeGa6zzjLr98v2OPG8iS2pg3SbpuUJO1+627X0TulZkVWu2ZN8Eqvl5R552wwm7VjZZzySWbburJLi8yPn2VxajvOlbK6Tau/TL1aL5tHa9DDVL1KTq1FHehlG0M2rtt3V7apPRlY252vxGIh8KFKNHK0pp7zfPNpJJ+ZFaIt/1sqUJWeeRIUcSvt9yMVFptaviSOCwc5Ze9TFmlFo2HWytxWlloslF/dZ8y0RipZvV3XPln4Ff2Bs5rVdfNc19C3YOgk78H7RGseWSK+COjg/1Nby5Fbx2IqSxS3rvdjaKWXp1eRcNvbShh6bu7yfyxvq3+rPRaFCo4/dbnJqVTPdS/wA28rW5XQrTyLJGGN2hJ1tx5WfefO+e74J/UvmyIr4Sad1l1/0UbBYBRco1Veb0XW+bfviW/s/NKnuLhqa9fNR0819jfoYOV8fySoAOMOwAAAAAAAAAAAAAAAAAAAAAAAAAAALnuHNtLEKlTlJ62yX/AJZokd2xFbTwu/r79/g+kS7cHzuOM8nmO2lOcnJu7bu7+/AhKMlOToyXclm5W+WSV4vquaPS8dsWLbdla1vIrOM2XCnVUYxtxv75ENQcX1ErqUlgg8N8bAzT+VZ7s08vKS1yJnZPbatWq08P8SolJtX3rt91vOWvDmWGls9OKUl3dLPnZ/yZ4DsnhlJVFSjvJqSfGNtLcnxubu55GzpfKyfYUWmZypKKcpOySu3wSRNU9nT1snr08SM2jhJyylG0ePU9lYooneNDujybatatia85xhPdbW6rW7kco9evi2ZYTs/VnJb7cFxXH1PT4bLjbNK6tnb0Nqw8Yxs915efvQ0ym/Qhd3llDfZ+FOO9uOXNfd/ksOzNn0Z0/k3Xyta3vQ6sXSs7Rd76rktbH3DqaWdvIg3auFX1sk06Sdv0I+0sIqbvB918OX7aGrG1ZqL+HHek+bSS9TqbufCpt3X+NfJbU7T/ACS+Ci7b2Jid2VacouyvK0m5WXlZ8+BlsvDUcIo1qzTcvletsnlYtW3cYqOHq1Gk92LsnxbyS9WeX7H+PiKsILeqNZ8O6uLzyXIstu1U7q5Sswkn3IG4aWumyMa8ttFlw1V1Ks68lup/KuKitF4stOxMK6dLvK0pPefS+i9Dh2JsJwtOs05J5RWkeXiyeK7c9fG3/HX29WWW26KVX+Sff0QABSlwAAAAAAAAAAAAAAAAAAAAAAAAAAAegzRrlRubow9/n6L1Mox5+PqfSj5yRWIoKzfvQpe08O3VclfW1/vb3w6HoGJgnF8rENUw3v8AY1WRyjZCWGR+Bw7lDzy6eHh+CWwNGyz195++RtwlCyOiFGx5CLE5G3DSsrv3dnHiqyckrG3H4yFKN5NLl1fAreL2m5O8Vbq9SPrNTVTHM2SNJp7bpYrRLVIw1ukQ+0sQrOMHnz1/2clStKWrb98jA57U7u3xUsfdl9ptoS5uefsjGELLn1MgCmlJyeWXUYqKwuwABiZEdt/Zn91QlR3ty7i72v8ALJPTyNmydlU8NBQpxtzfGT5t8TtBt8afR4eeO5r8GHX4mOewABqNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABasDttt2cXZcffQ7njo318vAiHB2snY1vCuLv63t9j6G7GkfP1FSZYqeaNM6SSu/fEzhtKnCK3nnbQgdp7RdR5XjFPLrlb+Q7UkFU8kssRFcVz8kcOJ2wnLdhn18iDhVzd3w/kwqT3dOf4sa56jCz2NkaMvHcx2heVVyk2+KXBa2svU1mMb/qd2fTjNdqPHucs8eh2Gho8GlRxz6gAEMmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEzRxD14+H5JHD1d7utXv9Hw8QDu4tvucK0iFqR77XvN/saKz/d+GiQBh2ZszwcUqqcvPK3TP+DNaLoAUG6amfX4S7F5tWng4+K+5kfACmLoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <h1 id="T-cardapet" class="text-center mt-5">Nosso Cardapet do dia</h1>
+        
+        <h2 class="text-center">Cachorrineos </h2>
+            <div class="row container pt-4 m-auto text-center bg-warning">
+                <div class="card col-lg-1 m-auto mb-4" style="width: 19rem;background-color: #fffffffc; border-radius: 0% 0% 25% 25%; border: none;">
+        
+                    <div class="card-body " >
+                    <h5 class="card-title mb-3 fw-bold fs-4">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary mt-4 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade justify-content-center text-center" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Morango</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#janelaModal">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="janelaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="janelaModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: pink;">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="janelamodal2">morango</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>MorangoLorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto " style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container pt-4 m-auto text-center bg-warning-1 pb-3">
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body ">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto " style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center mt-5">Gatineos</h2>
+            <div class="row container pt-4 m-auto text-center">
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body ">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto " style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container pt-4 m-auto text-center">
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body ">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto " style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card col-lg-1 m-auto" style="width: 19rem;">
+        
+                    <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com pata levantada">
+        
+                    <div class="conteiner-button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Saiba Mais
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Chocolate</h1>
+                        </div>
+                            <div class="modal-body">
+                            <img src="imagens/adoravel-cachorro-basenji-marrom-e-branco-sorrindo-e-dando-mais-uns-cinco-isolado-no-branco.jpg" class="card-img-top" alt="cachorro com patinha levantada">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque et debitis laborum doloremque id sunt quas dolore odit, rem voluptates maiores distinctio omnis numquam. Error aut vitae excepturi accusantium??</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Adote</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="bg-dark text-white fw-bold">
+        <p class="text-center">Site desenvolvidor blablabla</p>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <!-- <script src="index.js"></script> -->
+    </body>
+</html>

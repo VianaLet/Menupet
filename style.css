@@ -1,0 +1,80 @@
+.card{
+    background-color: #ffffff77;
+}
+.nav-link{
+    background-color: #000;
+}
+.bg-warning-1{
+    background-color: #0595A6;
+}
+.bg-sucess-1{
+    background-color: #FFD972;
+    color: #0595A6;
+}
+header>h1{
+    font-size: 3em;
+    font-family: bank;
+}
+.btn{
+    border: none;
+}
+.btn.btn-primary{
+    background-color: #0595A6;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    height: 45px;
+    width: 120px;
+    border-radius: 25px;
+    border: none;
+}
+.btn.btn-primary:hover{
+    color: white;
+    background-color: #EFA7A7;
+    height: 48px;
+    border: none;
+}
+
+body, main{
+    background-color: white;
+}
+
+.card{
+    margin: auto;
+    display: inline-flex;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px #00000014;
+}
+.card:hover{
+    background-color: white;
+    box-shadow: 5px 5px 5px #00000023;
+}
+#close{
+    background-color: #db772fb4;
+}
+
+
+.conteiner-button{
+    display: flex;
+    justify-content: center;
+}
+img{
+    border-radius: 50%;
+    height: 190px;
+}
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    background-color: #db772fb4;
+}
+.modal-body >p{
+    text-align: justify;
+    padding: 6px;
+}
+
+.w-95{
+    width: 98%;
+    margin: auto;
+    font-family: coiny;
+}
